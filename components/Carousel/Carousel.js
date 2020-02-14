@@ -47,9 +47,7 @@ function Carousel(obj) {
   // right button click event
   rightButton.addEventListener("click", event => {
     // if rightButton is clicked, I want image.src to become carouselImages[imageIndex+1] as long as count < carouselImages.length (at which point count should return to 0)?
-    
     var newIndex;
-    
     if (imageIndex < carouselImages.length -1) {
       newIndex = ++imageIndex;
       image.src = carouselImages[newIndex];
@@ -57,7 +55,6 @@ function Carousel(obj) {
       imageIndex = 0;
       image.src = carouselImages[imageIndex]
     }
-    
   })
 
   // left button click event

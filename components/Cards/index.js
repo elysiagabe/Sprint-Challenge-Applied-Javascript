@@ -58,7 +58,8 @@ function Cards(obj) {
     authorImg.src = obj.authorPhoto;
 
     // structure
-    authorInfo.append(imgContainer, authorImg, authorName);
+    imgContainer.append(authorImg);
+    authorInfo.append(imgContainer, authorName);
     card.append(headline, authorInfo);
 
     // return
