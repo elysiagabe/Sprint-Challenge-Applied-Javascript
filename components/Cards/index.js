@@ -24,8 +24,14 @@ const cardsContainer = document.querySelector(".cards-container");
 // Axios call
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
 .then(res => {
-    console.log(res.data);
-    // get, append & loop thru data here
+    //console.log(res.data.articles);
+    Object.values(res.data.articles).forEach(value => {
+        //console.log(value);
+        value.forEach(article => {
+            //console.log(article);
+            cardsContainer.appendChild(Cards(article));
+        })
+    })
 })
 .catch(err => console.log(`There was an error fetching data. ${err}`));
 

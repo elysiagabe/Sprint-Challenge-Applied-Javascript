@@ -14,7 +14,7 @@ const tabContainer = document.querySelector(".topics");
 // Axios call
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
 .then(res => {
-    console.log(res.data);
+    //console.log(res.data);
     // will pull & append data here
     tabContainer.appendChild(Tabs(res.data));
 })
