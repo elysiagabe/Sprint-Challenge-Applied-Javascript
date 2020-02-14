@@ -25,6 +25,7 @@ const cardsContainer = document.querySelector(".cards-container");
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
 .then(res => {
     //console.log(res.data.articles);
+    // get, loop thru & append data here
     Object.values(res.data.articles).forEach(value => {
         //console.log(value);
         value.forEach(article => {
